@@ -2,20 +2,18 @@
 % Please edit documentation in R/getSystemicData.R
 \name{getSystemicData}
 \alias{getSystemicData}
-\title{Assess to the data base}
+\title{Get Systemic injuruies data}
 \usage{
 getSystemicData(x)
 }
 \arguments{
 \item{x}{is mySQL data}
-
-\item{country}{is code}
 }
 \value{
 Fertilizer information table (dataframe)
 }
 \description{
-Assess to the data base
+Get Systemic injuruies data
 }
 \details{
 x

@@ -1,12 +1,11 @@
 ######################################################################
-#getSystemicData: inquery Pesticidedata from SKEP database
+#getSystemicData: inquery systemic injuires data from SKEP database
 ######################################################################
 #'
-#' Assess to the data base
+#' Get Systemic injuruies data
 #'
 #' @param x is mySQL data
 #'
-#' @param country is code
 #' @details x
 #' 
 #'
@@ -22,7 +21,7 @@
 
 getSystemicData <- function(x){
         
-        systemic <- tbl(x,"systemic") %>% 
+        systemic <- tbl(x,"systemis") %>% 
                 collect() %>%
                 select(-id_syst) %>%
                 transform(sys_type_id = as.factor(sys_type_id))

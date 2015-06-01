@@ -2,23 +2,21 @@
 % Please edit documentation in R/getFertilizerData.R
 \name{getFertilizerData}
 \alias{getFertilizerData}
-\title{Assess to the data base}
+\title{Get Fertilizer information}
 \usage{
 getFertilizerData(x)
 }
 \arguments{
 \item{x}{is mySQL data}
-
-\item{country}{is code}
 }
 \value{
 Fertilizer information table (dataframe)
 }
 \description{
-Assess to the data base
+Get Fertilizer information
 }
 \details{
-x
+x class SQL
 }
 \examples{
 a value x

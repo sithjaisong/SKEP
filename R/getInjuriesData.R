@@ -1,12 +1,10 @@
 ######################################################################
-#getInjuriesData: inquery Pesticidedata from SKEP database
+#getInjuriesData: inquery Injury information from SKEP database
 ######################################################################
 #'
-#' Assess to the data base
-#'
+#'Get Injury data  
 #' @param x is mySQL data
 #'
-#' @param country is code
 #' @details x
 #' 
 #'

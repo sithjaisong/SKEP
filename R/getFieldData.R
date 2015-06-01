@@ -2,11 +2,10 @@
 #getfileddata: inquery Filed data from SKEP database
 ######################################################################
 #'
-#' Assess to the data base
+#' Get field iinformation
 #'
 #' @param x is mySQL data
 #'
-#' @param country is code
 #' @details x
 #' 
 #'
@@ -20,7 +19,7 @@
 #' MySQL
 #'
 
-getfielddata <- function(x){
+getFielddata <- function(x){
         
         left_join(tbl(x,"general_info"), tbl(x,"crop_estab_met"), by = c("id" = "id_main")) %>%
                 left_join(tbl(x,"landform"), by = c("id" = "id_main"))

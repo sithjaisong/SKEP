@@ -1,0 +1,18 @@
+{
+    "contents" : "######################################################################\n#getInjuriesData: inquery Injury information from SKEP database\n######################################################################\n#'\n#'Get Injury data  \n#' @param x is mySQL data\n#'\n#' @details x\n#' \n#'\n#' @export x\n#'\n#' @return\n#' Fertilizer information table (dataframe)\n#'\n#' @examples a value x\n#' @keywords\n#' MySQL\n#'\n\ngetInjuriesData <- function(x){\n        \n        \n        hill.quad <- tbl(mydb, \"hill_quad\")%>%\n                collect() %>%\n                select(-id_hq) %>%\n                transform(type_hq = as.factor(type_hq))\n        \n        \n        names(hill.quad)[names(hill.quad) == \"hq_sample\"] <- \"sample\"\n        \n        # rename factor names of type_hq from code to abbreviation\n        levels(hill.quad$type_hq) <- c(\"nt\", \"np\", \"nl\")\n        \n        # reference of tyope of hill data\n        #type_hq <- tbl(mydb, \"type_hq\")\n        \n        # make data tidy\n        plant.info <- spread(hill.quad, type_hq, data)\n        \n        #==============\n        \n        injuries <- tbl(x,\"injury\") %>%\n                collect() %>%\n                select(-id_pest_tp) %>%\n                transform(inj_tp_type = as.factor(inj_tp_type))\n        \n        # rename inj_sample to sample for matching with the hill data\n        names(injuries)[names(injuries) == \"inj_sample\"] <- \"sample\"\n        \n        # save list of injuires \n        injury.detail <- collect(tbl(x,\"injury_detail\"))$injury\n        \n        #rename the levels of injury types \n        levels(injuries$inj_tp_type) <- injury.detail\n        \n        # make data more tidy\n        injuries.info <- spread(injuries, inj_tp_type, inj_tp_data)\n        \n        # join the hill data and injury data\n        left_join(plant.info, injuries.info, by =c( \"id_ci\", \"sample\" ))\n        \n}\n",
+    "created" : 1433122240520.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "118783177",
+    "id" : "CF2AF5A1",
+    "lastKnownWriteTime" : 1433122275,
+    "path" : "~/GitHub/SKEP/R/getInjuriesData.R",
+    "project_path" : "R/getInjuriesData.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 5,
+    "source_on_save" : false,
+    "type" : "r_source"
+}

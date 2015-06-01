@@ -2,11 +2,10 @@
 #getWeedData: inquery Pesticidedata from SKEP database
 ######################################################################
 #'
-#' Assess to the data base
+#' Get weed infestation data
 #'
 #' @param x is mySQL data
 #'
-#' @param country is code
 #' @details x
 #' 
 #'
@@ -25,7 +24,7 @@ getWeedData <- function(x){
         weed.rank <- tbl(x,"weed_rank") %>% 
                 collect() %>%
                 select(-id_weed_rank, -main_weed ) %>%
-                tranform(weed_type = as.factor(weed_type))
+                transform(weed_type = as.factor(weed_type))
         
         # save the list of weed type
         weed.type <- collect(tbl(x,"weed_type"))$weed_type
@@ -39,7 +38,7 @@ getWeedData <- function(x){
         weed.main <- tbl(mydb, "weed_main") %>%
                 select(-id_weed_main) %>%
                 collect() %>%
-                tranform(area = as.factor(area))
+                transform(area = as.factor(area))
         
         # rename sampling area from A, B, C to 1, 2, 3
         levels(weed.main$area) <- c("1", "2", "3")

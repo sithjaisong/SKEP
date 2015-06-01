@@ -2,20 +2,18 @@
 % Please edit documentation in R/getWeedData.R
 \name{getWeedData}
 \alias{getWeedData}
-\title{Assess to the data base}
+\title{Get weed infestation data}
 \usage{
 getWeedData(x)
 }
 \arguments{
 \item{x}{is mySQL data}
-
-\item{country}{is code}
 }
 \value{
 Fertilizer information table (dataframe)
 }
 \description{
-Assess to the data base
+Get weed infestation data
 }
 \details{
 x

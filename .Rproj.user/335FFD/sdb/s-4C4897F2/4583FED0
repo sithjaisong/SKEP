@@ -1,0 +1,18 @@
+{
+    "contents" : "######################################################################\n#getPestManagementData: inquery Pest control Management data from SKEP database\n######################################################################\n#'\n#' Get Farmer Management data\n#'\n#' @param x is mySQL data\n#'\n#' @details x class SQL \n#' \n#'\n#' @export x\n#'\n#' @return\n#' Fertilizer information table (dataframe)\n#'\n#' @examples x value \n#' @keywords\n#' MySQL\n#'\n\ngetPestManagementData <- function(x){\n        \n        tbl(x,\"general_info\") %>% \n                left_join(tbl(x,\"weed_mgmt\"), by = c(\"id\" = \"id_main\")) %>%\n                left_join(tbl(x,\"pesticides\"), by = c(\"id\" = \"id_main\")) %>%\n                left_join(tbl(x,\"fungicide\"), by = c(\"id\" = \"id_main\")) %>%\n                collect()\n}\n\n# eos",
+    "created" : 1433121900192.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1236342516",
+    "id" : "4583FED0",
+    "lastKnownWriteTime" : 1433122170,
+    "path" : "~/GitHub/SKEP/R/getPestManagementData.R",
+    "project_path" : "R/getPestManagementData.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "type" : "r_source"
+}

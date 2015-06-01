@@ -1,0 +1,18 @@
+{
+    "contents" : "######################################################################\n#getSystemicData: inquery systemic injuires data from SKEP database\n######################################################################\n#'\n#' Get Systemic injuruies data\n#'\n#' @param x is mySQL data\n#'\n#' @details x\n#' \n#'\n#' @export x\n#'\n#' @return\n#' Fertilizer information table (dataframe)\n#'\n#' @examples a value x\n#' @keywords\n#' MySQL\n#'\n\ngetSystemicData <- function(x){\n        \n        systemic <- tbl(x,\"systemis\") %>% \n                collect() %>%\n                select(-id_syst) %>%\n                transform(sys_type_id = as.factor(sys_type_id))\n        # save the systemic list to data frame\n        systemic.type <- collect(tbl(x,\"systemis_type\"))$injury\n        # rename the systemic type code to name of systemic injuries\n        levels(systemic$sys_type_id) <- systemic.type\n        \n        # make data more tidy\n        spread(systemic, sys_type_id, inj_data)\n}\n\n",
+    "created" : 1433122278834.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2893195916",
+    "id" : "3513444A",
+    "lastKnownWriteTime" : 1433122311,
+    "path" : "~/GitHub/SKEP/R/getSystemicData.R",
+    "project_path" : "R/getSystemicData.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 6,
+    "source_on_save" : false,
+    "type" : "r_source"
+}

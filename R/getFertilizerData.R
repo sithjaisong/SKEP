@@ -2,12 +2,11 @@
 #getFertilizerdata: inquery Filed data from SKEP database
 ######################################################################
 #'
-#' Assess to the data base
+#' Get Fertilizer information 
 #'
 #' @param x is mySQL data
 #'
-#' @param country is code
-#' @details x
+#' @details x class SQL
 #' 
 #'
 #' @export x

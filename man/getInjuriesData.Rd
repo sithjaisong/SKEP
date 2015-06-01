@@ -2,20 +2,18 @@
 % Please edit documentation in R/getInjuriesData.R
 \name{getInjuriesData}
 \alias{getInjuriesData}
-\title{Assess to the data base}
+\title{Get Injury data}
 \usage{
 getInjuriesData(x)
 }
 \arguments{
 \item{x}{is mySQL data}
-
-\item{country}{is code}
 }
 \value{
 Fertilizer information table (dataframe)
 }
 \description{
-Assess to the data base
+Get Injury data
 }
 \details{
 x

@@ -2,26 +2,24 @@
 % Please edit documentation in R/getPestManagementData.R
 \name{getPestManagementData}
 \alias{getPestManagementData}
-\title{Assess to the data base}
+\title{Get Farmer Management data}
 \usage{
 getPestManagementData(x)
 }
 \arguments{
 \item{x}{is mySQL data}
-
-\item{country}{is code}
 }
 \value{
 Fertilizer information table (dataframe)
 }
 \description{
-Assess to the data base
+Get Farmer Management data
 }
 \details{
-x
+x class SQL
 }
 \examples{
-a value x
+x value
 }
 \keyword{MySQL}
 

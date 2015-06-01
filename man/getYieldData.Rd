@@ -2,20 +2,18 @@
 % Please edit documentation in R/getYieldData.R
 \name{getYieldData}
 \alias{getYieldData}
-\title{Assess to the data base}
+\title{Get yield information data}
 \usage{
 getYieldData(x)
 }
 \arguments{
 \item{x}{is mySQL data}
-
-\item{country}{is code}
 }
 \value{
-Fertilizer information table (dataframe)
+Farm infomation and yields information table (dataframe)
 }
 \description{
-Assess to the data base
+Get yield information data
 }
 \details{
 x

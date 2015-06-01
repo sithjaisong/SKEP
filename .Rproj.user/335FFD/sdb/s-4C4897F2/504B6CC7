@@ -1,0 +1,17 @@
+{
+    "contents" : "######################################################################\n# SKEP.key: login to the SKEP data base\n######################################################################\n#'\n#' Assess to the data base\n#'\n#' @param username  MUST BE Character\n#'\n#' @param password MUST BE Character\n#' @details\n#' We access through the SKEP data base and sort out the data foolowing your param\n#'\n#' @export\n#'\n#' @return\n#' Data frame with Farm information \n#'\n#' @examples a value x\n#' @keywords\n#' MySQL\n#'\n\nloginSKEP <- function(username, password){\n        # use sith jaisong account for test the database\n       #urUsername <- \"sjaisong\"\n        # urPassword <- \"MovingProton793\"\n        \n        # access to the database and load tables \n        mydb<- src_mysql(user = username,  \n                         password = password, \n                         dbname = \"syngenta\",\n                         host = \"crophealth.irri.org\"\n        ) \n}\n\n\n\n",
+    "created" : 1433122380583.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2291081570",
+    "id" : "504B6CC7",
+    "lastKnownWriteTime" : 1433122431,
+    "path" : "~/GitHub/SKEP/R/loginSKEP.R",
+    "project_path" : "R/loginSKEP.R",
+    "properties" : {
+    },
+    "relative_order" : 8,
+    "source_on_save" : false,
+    "type" : "r_source"
+}

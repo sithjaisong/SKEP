@@ -1,13 +1,12 @@
 ######################################################################
-#getPestManagementData: inquery Pesticidedata from SKEP database
+#getPestManagementData: inquery Pest control Management data from SKEP database
 ######################################################################
 #'
-#' Assess to the data base
+#' Get Farmer Management data
 #'
 #' @param x is mySQL data
 #'
-#' @param country is code
-#' @details x
+#' @details x class SQL 
 #' 
 #'
 #' @export x
@@ -15,7 +14,7 @@
 #' @return
 #' Fertilizer information table (dataframe)
 #'
-#' @examples a value x
+#' @examples x value 
 #' @keywords
 #' MySQL
 #'
@@ -28,4 +27,5 @@ getPestManagementData <- function(x){
                 left_join(tbl(x,"fungicide"), by = c("id" = "id_main")) %>%
                 collect()
 }
+
 # eos
