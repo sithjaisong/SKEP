@@ -6,11 +6,11 @@
                                     "before starting querying SKEP Data.", skip_after=TRUE),
                         make_pretty("Type ls() to see a list of the variables in your workspace.",
                                     "Then, type rm(list=ls()) to clear your workspace.", skip_after=TRUE),
-                        make_pretty("Type SKEP() when you are ready to begin.", skip_after=TRUE)
+                        make_pretty("Type ?loginSKEP() to see hoew you access to the database.", skip_after=TRUE)
                 )
         } else {
                 packageStartupMessage(
-                        make_pretty("Wellcome to SKEP databse! Please, type ?loginSKEP() when you are ready to begin.",
+                        make_pretty("Wellcome to SKEP databse! Please, type ?loginSKEP() to see hoew you access to the database.",
                                     skip_after=TRUE)
                 )
         }

@@ -26,11 +26,16 @@ loginSKEP <- function(username, password){
         # urPassword <- "MovingProton793"
         
         # access to the database and load tables 
+        if(class(username) != "character" & class(password) != "character"){
+                stop("Please check your username or password, They must be character")
+                }else{
+        
         mydb<- src_mysql(user = username,  
                          password = password, 
                          dbname = "syngenta",
                          host = "crophealth.irri.org"
         ) 
+}
 }
 
 
