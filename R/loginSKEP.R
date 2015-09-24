@@ -37,6 +37,3 @@ loginSKEP <- function(username, password){
         ) 
 }
 }
-
-
-

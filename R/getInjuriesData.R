@@ -20,8 +20,11 @@
 
 getInjuriesData <- function(x){
         
+        injury_info <- tbl(x, "crop_injuries")%>%
+                collect() %>%
+                select(-c(project , field_num))
         
-        hill.quad <- tbl(mydb, "hill_quad")%>%
+        hill.quad <- tbl(x, "hill_quad")%>%
                 collect() %>%
                 select(-id_hq) %>%
                 transform(type_hq = as.factor(type_hq))
@@ -40,7 +43,7 @@ getInjuriesData <- function(x){
         
         #==============
         
-        injuries <- tbl(x,"injury") %>%
+        injuries <- tbl(x, "injury") %>%
                 collect() %>%
                 select(-id_pest_tp) %>%
                 transform(inj_tp_type = as.factor(inj_tp_type))
@@ -55,9 +58,13 @@ getInjuriesData <- function(x){
         levels(injuries$inj_tp_type) <- injury.detail
         
         # make data more tidy
-        injuries.info <- spread(injuries, inj_tp_type, inj_tp_data)
+        injuries.data <- spread(injuries, inj_tp_type, inj_tp_data)
         
         # join the hill data and injury data
-        left_join(plant.info, injuries.info, by =c( "id_ci", "sample" ))
+        temp <- left_join(plant.info, injuries.data, by =c( "id_ci", "sample" ))
+        
+        # combine with the crop_injuries data frame
+        
+        left_join(injury_info, temp, by = "id_ci")
         
 }
