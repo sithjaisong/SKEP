@@ -27,7 +27,7 @@ getWeedData <- function(x){
                 transform(weed_type = as.factor(weed_type))
         
         # save the list of weed type
-        weed.type <- collect(tbl(x,"weed_type"))$weed_type
+        weed.type <- collect(tbl(x, "weed_type"))$weed_type
         
         # rename weed type codes to weed type names
         levels(weed.rank$weed_type) <- weed.type
@@ -35,7 +35,7 @@ getWeedData <- function(x){
         # make data more tidy
         weed.rank.df <- spread(weed.rank, weed_type, data)
         #================================================
-        weed.main <- tbl(mydb, "weed_main") %>%
+        weed.main <- tbl(x, "weed_main") %>%
                 select(-id_weed_main) %>%
                 collect() %>%
                 transform(area = as.factor(area))
@@ -43,7 +43,7 @@ getWeedData <- function(x){
         # rename sampling area from A, B, C to 1, 2, 3
         levels(weed.main$area) <- c("1", "2", "3")
         # save to data frame of weed species lists
-        weed.list <- collect(tbl(mydb,"weed_list"))
+        weed.list <- collect(tbl(x,"weed_list"))
         
         # combine the main weed spcies with weed main species codes
         all.weed <- left_join(weed.main, weed.list, by = "weed_list_id" )
