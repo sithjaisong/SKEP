@@ -15,14 +15,14 @@
 #' @return
 #' Data frame with Farm information 
 #'
-#' @examples a value x
+#' @examples loginSKEP("sjaisong", "MovingProton793") # not run
 #' @keywords
 #' MySQL
 #'
 
 loginSKEP <- function(username, password){
         # use sith jaisong account for test the database
-       #urUsername <- "sjaisong"
+        #urUsername <- "sjaisong"
         # urPassword <- "MovingProton793"
         
         # access to the database and load tables 
