@@ -20,20 +20,17 @@
 #' MySQL
 #'
 
-loginSKEP <- function(username, password){
-        # use sith jaisong account for test the database
-        #urUsername <- "sjaisong"
-        # urPassword <- "MovingProton793"
+loginSKEP <- function(username, password) {
+        # use sith jaisong account for test the database urUsername <-
+        # 'sjaisong' urPassword <- 'MovingProton793'
         
-        # access to the database and load tables 
-        if(class(username) != "character" & class(password) != "character"){
+        # access to the database and load tables
+        if (class(username) != "character" & class(password) != "character") {
                 stop("Please check your username or password, They must be character")
-                }else{
+        } else {
+                
+                mydb <- src_mysql(user = username, password = password, dbname = "syngenta", 
+                                  host = "crophealth.irri.org")
+        }
         
-        mydb<- src_mysql(user = username,  
-                         password = password, 
-                         dbname = "syngenta",
-                         host = "crophealth.irri.org"
-        ) 
-}
 }

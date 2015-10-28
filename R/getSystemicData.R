@@ -33,4 +33,3 @@ getSystemicData <- function(x){
         # make data more tidy
         spread(systemic, sys_type_id, inj_data)
 }
-
