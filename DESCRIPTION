@@ -1,7 +1,7 @@
 Package: SYT.SKEP
 Type: Package
 Title: Functions for querying crop health data from SKEP database
-Version: 1.0
+Version: 0.1
 Date: 2015-05-26
 Author: Sith Jaisong
 Maintainer: Sith Jaisong <sith.jaisong@gmail.com>
@@ -11,7 +11,8 @@ Depends:
     stringr,
     dplyr,
     tidyr
-Imports: 
-        dplyr,
-        tidyr,
-License: IRRI 
+Imports:
+    dplyr,
+    tidyr,
+License: IRRI
+RoxygenNote: 5.0.0

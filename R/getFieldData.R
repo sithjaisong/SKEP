@@ -1,25 +1,12 @@
-###################################################################### getFertilizerdata: inquery Filed data from SKEP database
+#' getFertilizerdata: inquery fertilizer data from SKEP database
 #'
-#' Get Fertilizer information 
-#'
-#' @param x is mySQL data
-#'
-###################################################################### getfileddata: inquery Filed data from SKEP database
-#'
-#' Get field iinformation
-#'
-#' @param x is mySQL data
-#'
-#' @details x
-#' 
-#'
-#' @export x
-#'
-#' @return
+#' @param 
+#' x is mySQL data
+#' @return 
 #' Field information table (dataframe)
-#'
-#' @examples a value x
-#' @keywords
+#' @examples 
+#' getFielddata(db) # not run
+#' @keywords 
 #' MySQL
 #'
 

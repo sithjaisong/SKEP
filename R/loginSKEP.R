@@ -4,9 +4,11 @@
 #'
 #' Assess to the data base
 #'
-#' @param username  MUST BE Character
+#' @param 
+#' username  MUST BE Character
 #'
-#' @param password MUST BE Character
+#' @param 
+#' password MUST BE Character
 #' @details
 #' We access through the SKEP data base and sort out the data foolowing your param
 #'
@@ -15,7 +17,8 @@
 #' @return
 #' Data frame with Farm information 
 #'
-#' @examples loginSKEP("sjaisong", "MovingProton793") # not run
+#' @examples 
+#' loginSKEP("sjaisong", "MovingProton793") # not run
 #' @keywords
 #' MySQL
 #'

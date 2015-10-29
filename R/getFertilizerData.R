@@ -1,12 +1,12 @@
-#' @details x class SQL
-#' 
-#'
-#' @export x
-#'
-#' @return
 #' Fertilizer information table (dataframe)
-#'
-#' @examples a value x
+#' @details 
+#' x class SQL
+#' @export 
+#' x is mySQL data
+#' @return 
+#' dataframe
+#' @examples 
+#' getFertilizerData(db) # not run
 #' @keywords
 #' MySQL
 #'
