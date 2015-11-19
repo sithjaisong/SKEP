@@ -7,9 +7,9 @@
 #' @param x is mySQL data
 #'
 #' @details x
-#' 
 #'
-#' @export x
+#'
+#' @export
 #'
 #' @return
 #' Fertilizer information table (dataframe)
@@ -20,8 +20,8 @@
 #'
 
 getSystemicData <- function(x){
-        
-        systemic <- tbl(x,"systemis") %>% 
+
+        systemic <- tbl(x,"systemis") %>%
                 collect() %>%
                 select(-id_syst) %>%
                 transform(sys_type_id = as.factor(sys_type_id))
@@ -29,7 +29,8 @@ getSystemicData <- function(x){
         systemic.type <- collect(tbl(x,"systemis_type"))$injury
         # rename the systemic type code to name of systemic injuries
         levels(systemic$sys_type_id) <- systemic.type
-        
+
         # make data more tidy
         spread(systemic, sys_type_id, inj_data)
 }
+

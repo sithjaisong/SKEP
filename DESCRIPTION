@@ -10,9 +10,10 @@ Depends:
     R (>= 3.2.2),
     stringr,
     dplyr,
-    tidyr
+    tidyr,
+    RMySQL
 Imports:
     dplyr,
     tidyr,
 License: IRRI
-RoxygenNote: 5.0.0
+RoxygenNote: 5.0.1

@@ -21,7 +21,7 @@ Assess to the data base
 We access through the SKEP data base and sort out the data foolowing your param
 }
 \examples{
-loginSKEP("sjaisong", "MovingProton793") # not run
+a value x
 }
 \keyword{MySQL}
 

@@ -2,21 +2,24 @@
 % Please edit documentation in R/getFertilizerData.R
 \name{getFertilizerData}
 \alias{getFertilizerData}
-\title{Fertilizer information table (dataframe)}
+\title{Get Fertilizer information}
 \usage{
 getFertilizerData(x)
 }
+\arguments{
+\item{x}{is mySQL data}
+}
 \value{
-dataframe
+Fertilizer information table (dataframe)
 }
 \description{
-Fertilizer information table (dataframe)
+Get Fertilizer information
 }
 \details{
 x class SQL
 }
 \examples{
-getFertilizerData(db) # not run
+a value x
 }
 \keyword{MySQL}
 

@@ -16,7 +16,7 @@ Fertilizer information table (dataframe)
 Get Injury data
 }
 \details{
-x
+
 }
 \examples{
 a value x

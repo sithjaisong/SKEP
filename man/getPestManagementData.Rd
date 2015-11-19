@@ -19,7 +19,7 @@ Get Farmer Management data
 x class SQL
 }
 \examples{
-x value 
+x value
 }
 \keyword{MySQL}
 

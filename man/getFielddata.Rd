@@ -2,7 +2,7 @@
 % Please edit documentation in R/getFieldData.R
 \name{getFielddata}
 \alias{getFielddata}
-\title{getFertilizerdata: inquery fertilizer data from SKEP database}
+\title{Get field iinformation}
 \usage{
 getFielddata(x)
 }
@@ -13,10 +13,13 @@ getFielddata(x)
 Field information table (dataframe)
 }
 \description{
-getFertilizerdata: inquery fertilizer data from SKEP database
+Get field iinformation
+}
+\details{
+x
 }
 \examples{
-getFielddata(db) # not run
+a value x
 }
 \keyword{MySQL}
 
