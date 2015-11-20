@@ -23,5 +23,3 @@ getYieldData <- function(x){
                 left_join(tbl(x, "weight_harv"), by = c("id" = "main_id")) %>%
                 collect()
 }
-
-
