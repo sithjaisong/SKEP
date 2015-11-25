@@ -14,8 +14,6 @@
 #'
 #' @return
 #' Data frame with Farm information
-#'
-#' @examples loginSKEP( "sjaisong", "MovingProton793") # not run
 #' @keywords
 #' MySQL
 #'
