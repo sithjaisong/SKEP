@@ -52,9 +52,3 @@ getWeedData <- function(x){
         left_join(weed.rank.df, all.weed, by = c("id_ci" , "area"))
 
 }
-
-
-
-
-
-

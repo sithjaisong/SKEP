@@ -4,7 +4,7 @@
 #'
 #' Assess to the data base
 #'
-#' @param username  MUST BE Character
+#' @param username MUST BE Character
 #'
 #' @param password MUST BE Character
 #' @details
@@ -19,19 +19,16 @@
 #'
 
 loginSKEP <- function(username, password){
-        # use sith jaisong account for test the database
-       #urUsername <- "sjaisong"
-        # urPassword <- "MovingProton793"
 
         # access to the database and load tables
-        if(class(username) != "character" & class(password) != "character"){
-                stop("Please check your username or password, They must be character")
-                }else{
+        if (class(username) != "character" & class(password) != "character") {
+                stop("Please check your username or password, they must be characters.")
+        }else{
 
-        mydb<- src_mysql(user = username,
-                         password = password,
-                         dbname = "syngenta",
-                         host = "crophealth.irri.org"
-        )
-}
+                mydb <- src_mysql(user = username,
+                                  password = password,
+                                  dbname = "syngenta",
+                                  host = "crophealth.irri.org"
+                )
+        }
 }

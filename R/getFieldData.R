@@ -27,6 +27,4 @@ getFielddata <- function(x){
         temp %>% transform(date = as.Date(as.character(date)),
                                     latitude = as.numeric(as.character(latitude)),
                            longitude = as.numeric(as.character(longitude)))
-
-
 }

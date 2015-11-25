@@ -23,4 +23,3 @@ getFertilizerData <- function(x){
                 collect()
 
         }
-
