@@ -1,8 +1,8 @@
 ######################################################################
-#getFertilizerdata: inquery Filed data from SKEP database
+#getFertilizerdata: fertilizer data from SKEP database
 ######################################################################
 #'
-#' Get Fertilizer information
+#' Get fertilizer data
 #'
 #' @param x is mySQL data
 #'

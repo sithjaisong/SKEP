@@ -1,8 +1,8 @@
 ######################################################################
-#getfileddata: inquery Filed data from SKEP database
+#getfileddata: query field data from SYT SKEP database
 ######################################################################
 #'
-#' Get field iinformation
+#' Get field information
 #'
 #' @param x is mySQL data
 #'

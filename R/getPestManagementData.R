@@ -1,8 +1,8 @@
 ######################################################################
-#getPestManagementData: inquery Pest control Management data from SKEP database
+#getPestManagementData: query pest management data from SYT SKEP database
 ######################################################################
 #'
-#' Get Farmer Management data
+#' Get pest management data
 #'
 #' @param x is mySQL data
 #'

@@ -2,7 +2,7 @@
 # SKEP.key: login to the SKEP data base
 ######################################################################
 #'
-#' Assess to the data base
+#' Provide login credentials for SYT SKEP database
 #'
 #' @param username MUST BE Character
 #'
@@ -15,7 +15,7 @@
 #' @return
 #' Data frame with Farm information
 #'
-#' @examples loginSKEP("sjaisong", "MovingProton793") # not run
+#' @examples loginSKEP("sjaisong", "userpass") # not run
 #' @keywords
 #' MySQL
 #'
@@ -23,7 +23,7 @@
 loginSKEP <- function(username, password){
         # use sith jaisong account for test the database
         #urUsername <- "sjaisong"
-        # urPassword <- "MovingProton793"
+        # urPassword <- "userpass"
 
         # access to the database and load tables
         if (class(username) != "character" & class(password) != "character") {

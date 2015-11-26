@@ -1,5 +1,5 @@
 ######################################################################
-#getWeedData: inquery Pesticidedata from SKEP database
+#getWeedData: query weed data from SYT SYT SKEP database
 ######################################################################
 #'
 #' Get weed infestation data

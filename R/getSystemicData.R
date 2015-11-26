@@ -1,8 +1,8 @@
 ######################################################################
-#getSystemicData: inquery systemic injuires data from SKEP database
+#getSystemicData: query systemic injury data from SYT SKEP database
 ######################################################################
 #'
-#' Get Systemic injuruies data
+#' Get systemic injury data
 #'
 #' @param x is mySQL data
 #'
