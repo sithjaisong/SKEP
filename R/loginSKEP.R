@@ -8,28 +8,27 @@
 #'
 #' @param password MUST BE Character
 #' @details
-#' We access through the SKEP data base and sort out the data foolowing your param
+#' Provides access to the SYT SKEP database to retrieve and organize data for analysis
 #'
 #' @export
 #'
 #' @return
-#' Data frame with Farm information
+#' Data frame with SYT SKEP data for further analysis
 #'
-#' @examples loginSKEP("sjaisong", "userpass") # not run
+#' @examples loginSKEP("username", "userpass") # not run
 #' @keywords
 #' MySQL
 #'
 
 loginSKEP <- function(username, password){
-        # use sith jaisong account for test the database
-        #urUsername <- "sjaisong"
+        #
+        # urUsername <- "username"
         # urPassword <- "userpass"
 
-        # access to the database and load tables
+        # login to the database and load tables
         if (class(username) != "character" & class(password) != "character") {
                 stop("Please check your username or password, they must be characters.")
-        }else{
-
+        } else {
                 mydb <- src_mysql(user = username,
                                   password = password,
                                   dbname = "syngenta",
