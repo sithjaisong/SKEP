@@ -27,8 +27,8 @@ loginSKEP <- function(username, password){
 
                 mydb <- src_mysql(user = username,
                                   password = password,
-                                  dbname = "syngenta",
-                                  host = "crophealth.irri.org"
+                                  dbname = "syngenta_production",
+                                  host = "pdmsyng.cifebhddqikl.ap-southeast-1.rds.amazonaws.com"
                 )
         }
 }
