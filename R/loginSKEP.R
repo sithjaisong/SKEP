@@ -2,29 +2,40 @@
 # SKEP.key: login to the SKEP data base
 ######################################################################
 #'
-#' Assess to the data base
+#' Provide login credentials for SYT SKEP database
 #'
 #' @param username MUST BE Character
 #'
 #' @param password MUST BE Character
 #' @details
-#' We access through the SKEP data base and sort out the data foolowing your param
+#' Provides access to the SYT SKEP database to retrieve and organize data for analysis
 #'
 #' @export
 #'
 #' @return
+<<<<<<< HEAD
 #' Data frame with Farm information
+=======
+#' Data frame with SYT SKEP data for further analysis
+#'
+#' @examples loginSKEP("username", "userpass") # not run
+>>>>>>> origin/master
 #' @keywords
 #' MySQL
 #'
 
 loginSKEP <- function(username, password){
+<<<<<<< HEAD
+=======
+        #
+        # urUsername <- "username"
+        # urPassword <- "userpass"
+>>>>>>> origin/master
 
-        # access to the database and load tables
+        # login to the database and load tables
         if (class(username) != "character" & class(password) != "character") {
                 stop("Please check your username or password, they must be characters.")
-        }else{
-
+        } else {
                 mydb <- src_mysql(user = username,
                                   password = password,
                                   dbname = "syngenta_production",

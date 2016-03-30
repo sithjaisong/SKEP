@@ -1,8 +1,8 @@
 ######################################################################
-#getYieldData: inquery Pesticidedata from SKEP database
+#getYieldData: query yield data from SYT SKEP database
 ######################################################################
 #'
-#' Get yield information data
+#' Get yield data
 #' @param x is mySQL data
 #'
 #' @details x

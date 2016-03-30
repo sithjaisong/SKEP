@@ -1,8 +1,8 @@
 ######################################################################
-#getInjuriesData: inquery Injury information from SKEP database
+#getInjuriesData: query injury data from SYT SKEP database
 ######################################################################
 #'
-#'Get Injury data
+#'Get injury data
 #' @param x is mySQL data
 #'
 #' @details

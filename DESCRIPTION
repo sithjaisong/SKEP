@@ -1,11 +1,11 @@
 Package: SYT.SKEP
 Type: Package
-Title: Functions for querying crop health data from SKEP database
+Title: Functions for querying crop health data from SYT SKEP database
 Version: 0.1
 Date: 2015-05-26
 Author: Sith Jaisong
 Maintainer: Sith Jaisong <sith.jaisong@gmail.com>
-Description: For download surveys data from SKEP database
+Description: Functions to query and retrieve data from the IRRI SYT SKEP Phase II database
 Depends:
     R (>= 3.2.2),
     stringr,
