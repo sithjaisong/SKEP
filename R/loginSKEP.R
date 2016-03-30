@@ -13,24 +13,18 @@
 #' @export
 #'
 #' @return
-<<<<<<< HEAD
 #' Data frame with Farm information
-=======
 #' Data frame with SYT SKEP data for further analysis
 #'
 #' @examples loginSKEP("username", "userpass") # not run
->>>>>>> origin/master
 #' @keywords
 #' MySQL
 #'
 
 loginSKEP <- function(username, password){
-<<<<<<< HEAD
-=======
         #
         # urUsername <- "username"
         # urPassword <- "userpass"
->>>>>>> origin/master
 
         # login to the database and load tables
         if (class(username) != "character" & class(password) != "character") {
