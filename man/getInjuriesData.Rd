@@ -2,7 +2,7 @@
 % Please edit documentation in R/getInjuriesData.R
 \name{getInjuriesData}
 \alias{getInjuriesData}
-\title{Get Injury data}
+\title{Get injury data}
 \usage{
 getInjuriesData(x)
 }
@@ -13,7 +13,7 @@ getInjuriesData(x)
 Fertilizer information table (dataframe)
 }
 \description{
-Get Injury data
+Get injury data
 }
 \details{
 

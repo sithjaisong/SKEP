@@ -2,7 +2,7 @@
 % Please edit documentation in R/getFieldData.R
 \name{getFielddata}
 \alias{getFielddata}
-\title{Get field iinformation}
+\title{Get field information}
 \usage{
 getFielddata(x)
 }
@@ -13,7 +13,7 @@ getFielddata(x)
 Field information table (dataframe)
 }
 \description{
-Get field iinformation
+Get field information
 }
 \details{
 x

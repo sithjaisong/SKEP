@@ -2,7 +2,7 @@
 % Please edit documentation in R/getPestManagementData.R
 \name{getPestManagementData}
 \alias{getPestManagementData}
-\title{Get Farmer Management data}
+\title{Get pest management data}
 \usage{
 getPestManagementData(x)
 }
@@ -13,7 +13,7 @@ getPestManagementData(x)
 Fertilizer information table (dataframe)
 }
 \description{
-Get Farmer Management data
+Get pest management data
 }
 \details{
 x class SQL

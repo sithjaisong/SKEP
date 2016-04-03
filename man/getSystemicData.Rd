@@ -2,7 +2,7 @@
 % Please edit documentation in R/getSystemicData.R
 \name{getSystemicData}
 \alias{getSystemicData}
-\title{Get Systemic injuruies data}
+\title{Get systemic injury data}
 \usage{
 getSystemicData(x)
 }
@@ -13,7 +13,7 @@ getSystemicData(x)
 Fertilizer information table (dataframe)
 }
 \description{
-Get Systemic injuruies data
+Get systemic injury data
 }
 \details{
 x

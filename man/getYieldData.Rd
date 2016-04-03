@@ -2,7 +2,7 @@
 % Please edit documentation in R/getYieldData.R
 \name{getYieldData}
 \alias{getYieldData}
-\title{Get yield information data}
+\title{Get yield data}
 \usage{
 getYieldData(x)
 }
@@ -13,7 +13,7 @@ getYieldData(x)
 Farm infomation and yields information table (dataframe)
 }
 \description{
-Get yield information data
+Get yield data
 }
 \details{
 x

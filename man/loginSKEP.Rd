@@ -2,7 +2,7 @@
 % Please edit documentation in R/loginSKEP.R
 \name{loginSKEP}
 \alias{loginSKEP}
-\title{Assess to the data base}
+\title{Provide login credentials for SYT SKEP database}
 \usage{
 loginSKEP(username, password)
 }
@@ -13,12 +13,16 @@ loginSKEP(username, password)
 }
 \value{
 Data frame with Farm information
+Data frame with SYT SKEP data for further analysis
 }
 \description{
-Assess to the data base
+Provide login credentials for SYT SKEP database
 }
 \details{
-We access through the SKEP data base and sort out the data foolowing your param
+Provides access to the SYT SKEP database to retrieve and organize data for analysis
+}
+\examples{
+loginSKEP("username", "userpass") # not run
 }
 \keyword{MySQL}
 
