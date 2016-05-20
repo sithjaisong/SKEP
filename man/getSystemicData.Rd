@@ -2,24 +2,20 @@
 % Please edit documentation in R/getSystemicData.R
 \name{getSystemicData}
 \alias{getSystemicData}
-\title{Get systemic injury data}
+\title{Get SYT SKEP systemic injury data}
 \usage{
 getSystemicData(x)
 }
 \arguments{
-\item{x}{is mySQL data}
+\item{x}{is the MySQL database hosted on Amazon Web Services}
 }
 \value{
-Fertilizer information table (dataframe)
+Systemic injury information table (dataframe)
 }
 \description{
-Get systemic injury data
+This function queries the database for systemic injury data
 }
 \details{
-x
+This function returns a database of systemic injury data
 }
-\examples{
-a value x
-}
-\keyword{MySQL}
 

@@ -2,24 +2,20 @@
 % Please edit documentation in R/getYieldData.R
 \name{getYieldData}
 \alias{getYieldData}
-\title{Get yield data}
+\title{Get SYT SKEP yield data}
 \usage{
 getYieldData(x)
 }
 \arguments{
-\item{x}{is mySQL data}
+\item{x}{is the MySQL database hosted on Amazon Web Services}
 }
 \value{
-Farm infomation and yields information table (dataframe)
+Crop cut yield information table (dataframe)
 }
 \description{
-Get yield data
+This function queries the database for crop cut yield data
 }
 \details{
-x
+This function returns a database of crop cut yield data
 }
-\examples{
-a value x
-}
-\keyword{MySQL}
 

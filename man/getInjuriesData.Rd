@@ -2,24 +2,20 @@
 % Please edit documentation in R/getInjuriesData.R
 \name{getInjuriesData}
 \alias{getInjuriesData}
-\title{Get injury data}
+\title{Get SYT SKEP injury data}
 \usage{
 getInjuriesData(x)
 }
 \arguments{
-\item{x}{is mySQL data}
+\item{x}{is the MySQL database hosted on Amazon Web Services}
 }
 \value{
-Fertilizer information table (dataframe)
+Injury data information table (dataframe)
 }
 \description{
-Get injury data
+This function queries the database for injury data
 }
 \details{
-
+This function returns a database of injury data
 }
-\examples{
-a value x
-}
-\keyword{MySQL}
 

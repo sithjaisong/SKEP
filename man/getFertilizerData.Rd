@@ -2,24 +2,20 @@
 % Please edit documentation in R/getFertilizerData.R
 \name{getFertilizerData}
 \alias{getFertilizerData}
-\title{Get fertilizer data}
+\title{Get SYT SKEP fertilizer data}
 \usage{
 getFertilizerData(x)
 }
 \arguments{
-\item{x}{is mySQL data}
+\item{x}{is the MySQL database hosted on Amazon Web Services}
 }
 \value{
 Fertilizer information table (dataframe)
 }
 \description{
-Get fertilizer data
+This function queries the database for fertilizer data
 }
 \details{
-x class SQL
+This function returns a database of fertilizer data
 }
-\examples{
-a value x
-}
-\keyword{MySQL}
 
