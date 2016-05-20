@@ -2,24 +2,20 @@
 % Please edit documentation in R/getWeedData.R
 \name{getWeedData}
 \alias{getWeedData}
-\title{Get weed infestation data}
+\title{Get SYT SKEP weed data}
 \usage{
 getWeedData(x)
 }
 \arguments{
-\item{x}{is mySQL data}
+\item{x}{is the MySQL database hosted on Amazon Web Services}
 }
 \value{
-Fertilizer information table (dataframe)
+Weed information table (dataframe)
 }
 \description{
-Get weed infestation data
+This function queries the database for weed data
 }
 \details{
-x
+This function returns a database of weed data
 }
-\examples{
-a value x
-}
-\keyword{MySQL}
 

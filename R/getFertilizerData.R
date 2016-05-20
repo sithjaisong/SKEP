@@ -1,6 +1,6 @@
 #' @title Get SYT SKEP fertilizer data
 #'
-#'@description This function queries the database for fertilizer data
+#' @description This function queries the database for fertilizer data
 #'
 #' @param x is the MySQL database hosted on Amazon Web Services
 #'

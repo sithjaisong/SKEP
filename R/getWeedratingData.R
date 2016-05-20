@@ -1,27 +1,18 @@
-######################################################################
-#getWeedData: query weed data from SYT SYT SKEP database
-######################################################################
+#' @title Get SYT SKEP weed rating data
 #'
-#' Get weed infestation data
+#'@description This function queries the database for weed rating data
 #'
-#' @param x is mySQL data
+#' @param x is the MySQL database hosted on Amazon Web Services
 #'
-#' @details x
+#' @details This function returns a database of weed injury rating data
 #'
+#' @return Weed injury information table (dataframe)
 #'
-#'
-#' @return
-#' Fertilizer information table (dataframe)
-#'
-#' @examples a value x
-#' @keywords
-#' MySQL
-#'
+#' @importFrom magrittr "%>%"
 #' @export
 getWeedratingData <- function(x){
-
-        weed_rating <-tbl(x,"weed_rating") %>%
-                collect() %>%
-                select(-id_weed_rating)
+        weed_rating <- dplyr::tbl(x, "weed_rating") %>%
+                dplyr::collect() %>%
+                dplyr::select(-id_weed_rating)
 
 }

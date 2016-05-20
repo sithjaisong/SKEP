@@ -10,7 +10,7 @@ getInjuriesData(x)
 \item{x}{is the MySQL database hosted on Amazon Web Services}
 }
 \value{
-Field information table (dataframe)
+Injury data information table (dataframe)
 }
 \description{
 This function queries the database for injury data

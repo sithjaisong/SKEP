@@ -1,33 +1,21 @@
-######################################################################
-#getSystemicData: query systemic injury data from SYT SKEP database
-######################################################################
+#' @title Get SYT SKEP systemic injury data
 #'
-#' Get systemic injury data
+#' @description This function queries the database for systemic injury data
 #'
-#' @param x is mySQL data
+#' @param x is the MySQL database hosted on Amazon Web Services
 #'
-#' @details x
+#' @details This function returns a database of systemic injury data
 #'
+#' @return Systemic injury information table (dataframe)
 #'
-#'
-#' @return
-#' Fertilizer information table (dataframe)
-#'
-#' @examples a value x
-#' @keywords
-#' MySQL
+#' @importFrom magrittr "%>%"
 #' @export
 getSystemicData <- function(x){
-
-        systemic <- tbl(x,"systemis") %>%
-                collect() %>%
-                select(-id_syst) %>%
+        systemic <- dplyr::tbl(x, "systemis") %>%
+                dplyr::collect() %>%
+                dplyr::select(-id_syst) %>%
                 transform(sys_type_id = as.factor(sys_type_id))
-        # save the systemic list to data frame
-        systemic.type <- collect(tbl(x,"systemis_type"))$injury
-        # rename the systemic type code to name of systemic injuries
+        systemic.type <- dplyr::collect(dplyr::tbl(x, "systemis_type"))$injury
         levels(systemic$sys_type_id) <- systemic.type
-
-        # make data more tidy
-        spread(systemic, sys_type_id, inj_data)
+        tidyr::spread(systemic, sys_type_id, inj_data)
 }

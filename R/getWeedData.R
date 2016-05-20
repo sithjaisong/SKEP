@@ -1,55 +1,29 @@
-######################################################################
-#getWeedData: query weed data from SYT SYT SKEP database
-######################################################################
+#' @title Get SYT SKEP weed data
 #'
-#' Get weed infestation data
+#' @description This function queries the database for weed data
 #'
-#' @param x is mySQL data
+#' @param x is the MySQL database hosted on Amazon Web Services
 #'
-#' @details x
+#' @details This function returns a database of weed data
 #'
+#' @return Weed information table (dataframe)
 #'
+#' @importFrom magrittr "%>%"
 #' @export
-#'
-#' @return
-#' Fertilizer information table (dataframe)
-#'
-#' @examples a value x
-#' @keywords
-#' MySQL
-#'
-#' @export
-
 getWeedData <- function(x){
-
-        weed.rank <- tbl(x,"weed_rank") %>%
-                collect() %>%
-                select(-id_weed_rank, -main_weed ) %>%
+        weed.rank <- dplyr::tbl(x, "weed_rank") %>%
+                dplyr::collect() %>%
+                dplyr::select(-id_weed_rank, -main_weed ) %>%
                 transform(weed_type = as.factor(weed_type))
-
-        # save the list of weed type
-        weed.type <- collect(tbl(x, "weed_type"))$weed_type
-
-        # rename weed type codes to weed type names
+        weed.type <- dplyr::collect(dplyr::tbl(x, "weed_type"))$weed_type
         levels(weed.rank$weed_type) <- weed.type
-
-        # make data more tidy
-        weed.rank.df <- spread(weed.rank, weed_type, data)
-        #================================================
-        weed.main <- tbl(x, "weed_main") %>%
-                select(-id_weed_main) %>%
-                collect() %>%
+        weed.rank.df <- tidyr::spread(weed.rank, weed_type, data)
+        weed.main <- dplyr::tbl(x, "weed_main") %>%
+                dplyr::select(-id_weed_main) %>%
+                dplyr::collect() %>%
                 transform(area = as.factor(area))
-
-        # rename sampling area from A, B, C to 1, 2, 3
         levels(weed.main$area) <- c("1", "2", "3")
-        # save to data frame of weed species lists
-        weed.list <- collect(tbl(x,"weed_list"))
-
-        # combine the main weed spcies with weed main species codes
-        all.weed <- left_join(weed.main, weed.list, by = "weed_list_id" )
-
-        # combine weed ranking with main weed species
-        left_join(weed.rank.df, all.weed, by = c("id_ci" , "area"))
-
+        weed.list <- dplyr::collect(dplyr::tbl(x, "weed_list"))
+        all.weed <- dplyr::left_join(weed.main, weed.list, by = "weed_list_id")
+        dplyr::left_join(weed.rank.df, all.weed, by = c("id_ci", "area"))
 }

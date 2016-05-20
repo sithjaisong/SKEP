@@ -1,24 +1,18 @@
-######################################################################
-#getYieldData: query yield data from SYT SKEP database
-######################################################################
+#' @title Get SYT SKEP yield data
 #'
-#' Get yield data
-#' @param x is mySQL data
+#'@description This function queries the database for crop cut yield data
 #'
-#' @details x
+#' @param x is the MySQL database hosted on Amazon Web Services
 #'
+#' @details This function returns a database of crop cut yield data
 #'
+#' @return Crop cut yield information table (dataframe)
 #'
-#' @return
-#' Farm infomation and yields information table (dataframe)
-#'
-#' @examples a value x
-#' @keywords
-#' MySQL
-#'
+#' @importFrom magrittr "%>%"
 #' @export
 getYieldData <- function(x){
-             tbl(x, "general_info") %>%
-                left_join(tbl(x, "weight_harv"), by = c("id" = "main_id")) %>%
-                collect()
+        dplyr::tbl(x, "general_info") %>%
+                dplyr::left_join(dplyr::tbl(x, "weight_harv"),
+                                 by = c("id" = "main_id")) %>%
+                dplyr::collect()
 }

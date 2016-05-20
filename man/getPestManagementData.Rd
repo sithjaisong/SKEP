@@ -2,24 +2,20 @@
 % Please edit documentation in R/getPestManagementData.R
 \name{getPestManagementData}
 \alias{getPestManagementData}
-\title{Get pest management data}
+\title{Get SYT SKEP pest management data}
 \usage{
 getPestManagementData(x)
 }
 \arguments{
-\item{x}{is mySQL data}
+\item{x}{is the MySQL database hosted on Amazon Web Services}
 }
 \value{
-Fertilizer information table (dataframe)
+Pest management information table (dataframe)
 }
 \description{
-Get pest management data
+This function queries the database for pest management data
 }
 \details{
-x class SQL
+This function returns a database of pest management data
 }
-\examples{
-x value
-}
-\keyword{MySQL}
 

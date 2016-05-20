@@ -1,6 +1,6 @@
 #' @title Get SYT SKEP field data
 #'
-#'@description This function queries the database for field data
+#' @description This function queries the database for field data
 #'
 #' @param x is the MySQL database hosted on Amazon Web Services
 #'
