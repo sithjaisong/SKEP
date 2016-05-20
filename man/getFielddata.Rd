@@ -2,24 +2,20 @@
 % Please edit documentation in R/getFieldData.R
 \name{getFielddata}
 \alias{getFielddata}
-\title{Get field information}
+\title{Get SYT SKEP field data}
 \usage{
 getFielddata(x)
 }
 \arguments{
-\item{x}{is mySQL data}
+\item{x}{is the MySQL database hosted on Amazon Web Services}
 }
 \value{
 Field information table (dataframe)
 }
 \description{
-Get field information
+This function queries the database for field data
 }
 \details{
-x
+This function returns a database of field data
 }
-\examples{
-a value x
-}
-\keyword{MySQL}
 

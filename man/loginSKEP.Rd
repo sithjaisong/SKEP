@@ -2,7 +2,7 @@
 % Please edit documentation in R/loginSKEP.R
 \name{loginSKEP}
 \alias{loginSKEP}
-\title{Provide login credentials for SYT SKEP database}
+\title{login to the SKEP data base}
 \usage{
 loginSKEP(username, password)
 }
@@ -11,18 +11,18 @@ loginSKEP(username, password)
 
 \item{password}{MUST BE Character}
 }
-\value{
-Data frame with Farm information
-Data frame with SYT SKEP data for further analysis
-}
 \description{
-Provide login credentials for SYT SKEP database
+This function provides login capabilities to log into and
+retrieve data from the IRRI/SYT SKEP Phase II database hosted on AWS.
 }
 \details{
-Provides access to the SYT SKEP database to retrieve and organize data for analysis
+This function provides access to the SYT SKEP database to retrieve
+and organize data for analysis.
 }
 \examples{
-loginSKEP("username", "userpass") # not run
+\dontrun{
+loginSKEP("username", "userpass")
 }
-\keyword{MySQL}
+
+}
 

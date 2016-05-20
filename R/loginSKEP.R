@@ -1,36 +1,28 @@
-######################################################################
-# SKEP.key: login to the SKEP data base
-######################################################################
+#' @title login to the SKEP data base
 #'
-#' Provide login credentials for SYT SKEP database
+#'@description This function provides login capabilities to log into and
+#'retrieve data from the IRRI/SYT SKEP Phase II database hosted on AWS.
 #'
 #' @param username MUST BE Character
+#' @param  password MUST BE Character
 #'
-#' @param password MUST BE Character
-#' @details
-#' Provides access to the SYT SKEP database to retrieve and organize data for analysis
+#' @details This function provides access to the SYT SKEP database to retrieve
+#' and organize data for analysis.
+#' @examples
+#' \dontrun{
+#' loginSKEP("username", "userpass")
+#' }
 #'
 #' @export
-#'
-#' @return
-#' Data frame with Farm information
-#' Data frame with SYT SKEP data for further analysis
-#'
-#' @examples loginSKEP("username", "userpass") # not run
-#' @keywords
-#' MySQL
-#'
-
 loginSKEP <- function(username, password){
-        #
-        # urUsername <- "username"
-        # urPassword <- "userpass"
 
-        # login to the database and load tables
+        mydb <- NULL
+
         if (class(username) != "character" & class(password) != "character") {
-                stop("Please check your username or password, they must be characters.")
+                stop("Please check your username or password,
+                     they must be characters.")
         } else {
-                mydb <- src_mysql(user = username,
+                mydb <- dplyr::src_mysql(user = username,
                                   password = password,
                                   dbname = "syngenta_production",
                                   host = "pdmsyng.cifebhddqikl.ap-southeast-1.rds.amazonaws.com"

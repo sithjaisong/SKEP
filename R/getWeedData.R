@@ -18,6 +18,7 @@
 #' @keywords
 #' MySQL
 #'
+#' @export
 
 getWeedData <- function(x){
 

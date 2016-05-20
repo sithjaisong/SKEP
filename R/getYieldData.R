@@ -8,7 +8,6 @@
 #' @details x
 #'
 #'
-#' @export
 #'
 #' @return
 #' Farm infomation and yields information table (dataframe)
@@ -17,7 +16,7 @@
 #' @keywords
 #' MySQL
 #'
-
+#' @export
 getYieldData <- function(x){
              tbl(x, "general_info") %>%
                 left_join(tbl(x, "weight_harv"), by = c("id" = "main_id")) %>%

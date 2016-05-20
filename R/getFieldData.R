@@ -1,30 +1,26 @@
-######################################################################
-#getfileddata: query field data from SYT SKEP database
-######################################################################
+#' @title Get SYT SKEP field data
 #'
-#' Get field information
+#'@description This function queries the database for field data
 #'
-#' @param x is mySQL data
+#' @param x is the MySQL database hosted on Amazon Web Services
 #'
-#' @details x
+#' @details This function returns a database of field data
 #'
+#' @return Field information table (dataframe)
+#'
+#' @importFrom magrittr "%>%"
 #' @export
-#'
-#' @return
-#' Field information table (dataframe)
-#'
-#' @examples a value x
-#' @keywords
-#' MySQL
-#'
-
 getFielddata <- function(x){
+        latitude <- longitude <- NULL
 
-        temp <- left_join(tbl(x,"general_info"), tbl(x,"crop_estab_met"), by = c("id" = "id_main")) %>%
-                left_join(tbl(x,"landform"), by = c("id" = "id_main")) %>%
-                collect()
+        temp <- dplyr::left_join(dplyr::tbl(x, "general_info"),
+                                 dplyr::tbl(x, "crop_estab_met"),
+                                 by = c("id" = "id_main")) %>%
+                dplyr::left_join(dplyr::tbl(x, "landform"),
+                                 by = c("id" = "id_main")) %>%
+                dplyr::collect()
 
         temp %>% transform(date = as.Date(as.character(date)),
-                                    latitude = as.numeric(as.character(latitude)),
+                           latitude = as.numeric(as.character(latitude)),
                            longitude = as.numeric(as.character(longitude)))
 }

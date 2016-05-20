@@ -2,18 +2,20 @@ Package: SYT.SKEP
 Type: Package
 Title: Functions for querying crop health data from SYT SKEP database
 Version: 0.1
-Date: 2015-05-26
-Author: Sith Jaisong
+Authors@R: c(person("Sith", "Jaisong", role = c("aut", "cre"),
+    email = "sith.jaisong@gmail.com"),
+    person("Adam", "Sparks", role = "ctb",
+    email = "adamhsparks@gmail.com"))
 Maintainer: Sith Jaisong <sith.jaisong@gmail.com>
-Description: Functions to query and retrieve data from the IRRI SYT SKEP Phase II database
-Depends:
-    R (>= 3.2.2),
-    stringr,
-    dplyr,
-    tidyr,
-    RMySQL
+Description: Functions to query and retrieve data from the IRRI SYT SKEP Phase
+        II database hosted on Amazon Web Services (AWS).
+Depends:R (>= 3.2.2)
 Imports:
     dplyr,
+    RMySQL,
+    magrittr,
+    stringr,
     tidyr,
-License: IRRI
+    utils
+License: GPL (>= 3)
 RoxygenNote: 5.0.1

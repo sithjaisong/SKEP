@@ -8,7 +8,6 @@
 #'
 #' @details x class SQL
 #'
-#' @export
 #'
 #' @return
 #' Fertilizer information table (dataframe)
@@ -17,7 +16,7 @@
 #' @keywords
 #' MySQL
 #'
-
+#' @export
 getPestManagementData <- function(x){
 
         tbl(x, "general_info") %>%

@@ -9,7 +9,6 @@
 #' @details x
 #'
 #'
-#' @export
 #'
 #' @return
 #' Fertilizer information table (dataframe)
@@ -18,7 +17,7 @@
 #' @keywords
 #' MySQL
 #'
-
+#' @export
 getWeedratingData <- function(x){
 
         weed_rating <-tbl(x,"weed_rating") %>%

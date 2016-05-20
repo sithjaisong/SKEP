@@ -9,7 +9,6 @@
 #' @details x
 #'
 #'
-#' @export
 #'
 #' @return
 #' Fertilizer information table (dataframe)
@@ -17,8 +16,7 @@
 #' @examples a value x
 #' @keywords
 #' MySQL
-#'
-
+#' @export
 getSystemicData <- function(x){
 
         systemic <- tbl(x,"systemis") %>%
