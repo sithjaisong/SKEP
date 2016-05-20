@@ -1,7 +1,7 @@
 Package: SYT.SKEP
 Type: Package
 Title: Functions for querying crop health data from SYT SKEP database
-Version: 0.1
+Version: 0.1.1
 Authors@R: c(person("Sith", "Jaisong", role = c("aut", "cre"),
     email = "sith.jaisong@gmail.com"),
     person("Adam", "Sparks", role = "ctb",
