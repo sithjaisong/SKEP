@@ -4,7 +4,7 @@ Title: Functions for querying crop health data from SYT SKEP database
 Version: 0.1.1
 Authors@R: c(person("Sith", "Jaisong", role = c("aut", "cre"),
     email = "sith.jaisong@gmail.com"),
-    person("Adam", "Sparks", role = "ctb",
+    person("Adam", "Sparks", role = c("ctb", "ths"),
     email = "adamhsparks@gmail.com"))
 Maintainer: Sith Jaisong <sith.jaisong@gmail.com>
 Description: Functions to query and retrieve data from the IRRI SYT SKEP Phase
