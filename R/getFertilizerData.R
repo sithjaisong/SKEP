@@ -8,7 +8,7 @@
 #'
 #' @return Fertilizer information table (dataframe)
 #'
-#' @importFrom magrittr "%>%"
+#' @importFrom magrittr %>%
 #' @export
 getFertilizerData <- function(x){
         dplyr::left_join(dplyr::tbl(x, "general_info"),

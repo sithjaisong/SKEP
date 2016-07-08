@@ -8,7 +8,7 @@
 #'
 #' @return Field information table (dataframe)
 #'
-#' @importFrom magrittr "%>%"
+#' @importFrom magrittr %>%
 #' @export
 getFielddata <- function(x){
         latitude <- longitude <- NULL

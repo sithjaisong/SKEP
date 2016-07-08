@@ -8,7 +8,7 @@
 #'
 #' @return Weed information table (dataframe)
 #'
-#' @importFrom magrittr "%>%"
+#' @importFrom magrittr %>%
 #' @export
 getWeedData <- function(x){
         weed.rank <- dplyr::tbl(x, "weed_rank") %>%

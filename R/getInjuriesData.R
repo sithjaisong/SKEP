@@ -8,7 +8,7 @@
 #'
 #' @return Injury data information table (dataframe)
 #'
-#' @importFrom magrittr "%>%"
+#' @importFrom magrittr %>%
 #' @export
 getInjuriesData <- function(x){
         injury_info <- dplyr::tbl(x, "crop_injuries") %>%

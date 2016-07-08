@@ -8,7 +8,7 @@
 #'
 #' @return Crop cut yield information table (dataframe)
 #'
-#' @importFrom magrittr "%>%"
+#' @importFrom magrittr %>%
 #' @export
 getYieldData <- function(x){
         dplyr::tbl(x, "general_info") %>%

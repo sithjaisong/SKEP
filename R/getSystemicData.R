@@ -8,7 +8,7 @@
 #'
 #' @return Systemic injury information table (dataframe)
 #'
-#' @importFrom magrittr "%>%"
+#' @importFrom magrittr %>%
 #' @export
 getSystemicData <- function(x){
         systemic <- dplyr::tbl(x, "systemis") %>%

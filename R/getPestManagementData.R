@@ -8,7 +8,7 @@
 #'
 #' @return Pest management information table (dataframe)
 #'
-#' @importFrom magrittr "%>%"
+#' @importFrom magrittr %>%
 #' @export
 getPestManagementData <- function(x){
         dplyr::tbl(x, "general_info") %>%
